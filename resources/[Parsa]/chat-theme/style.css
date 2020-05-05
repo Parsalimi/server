@@ -1,0 +1,150 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #ffbb33;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: rgba(170, 102, 204, 0); display: none; font-size:0px;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
+    src: url("../BarlowCondensed.ttf");
+
+* {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  font-family: 'Barlow Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.chat-window {
+    --size: calc((((2.7vw / 1.77777) * 1.2)) * 6);
+    position: absolute;
+    left: calc(-.3vw);
+    top: calc(70% - (var(--size) / 1.4));
+    height: var(--size) !important;
+    background: inherit !important;
+    text-align: left;
+    right: auto;
+    user-select: none;
+    resize: none;
+}
+
+.chat-messages {
+  position: relative;
+  height: 95%;
+  width: 50%;
+  font-size: 1.0rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.msg-single{
+  background: rgba(0, 0, 0, .3);
+  border-radius: 3px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.chat-input {
+    position: absolute;
+    right: 84.5%;
+    bottom: 20%;
+    width: 14%;
+    background: inherit !important;
+    text-align: right;
+    top: auto;
+    left: auto;
+    height: auto;
+    font-family: Font2, sans-serif;
+}
+
+.chat-input > div {
+    background-color: rgba(0, 0, 0, .1);
+    padding: calc(0.15625vw / 2);
+}
+
+.chat-input .prefix {
+    margin: 0;
+    margin-left: 0.7%;
+    margin-top: -0.1%;
+}
+
+.chat-input > div + div {
+    position: absolute;
+    bottom: calc(1.65vh + 0.15625vw + 0.15625vw + 0.15625vw + (0.15625vw / 2));
+    text-align: left;
+}
+
+.prefix {
+  position: absolute;
+  margin-top: 2px;
+  left: -10px;
+}
+
+textarea {
+    background: transparent;
+    border: 1px solid rgba(180, 180, 180, .6);
+    padding: calc(0.15625vw / 2);
+    padding-left: calc(3.5% + (0.15625vw / 2));
+    user-select: none;
+}
+
+
+.msg {
+  margin-bottom: 5px;
+}
+
+.twitter
+{
+  height: 10%;
+  width: 90%;
+  background: #ffbb33;
+  border-radius: 5px;
+  color: #0000;
+}
+
+.multiline {
+  margin-left: 1.5rem;
+  text-indent: -1.5rem;
+  white-space: pre-line;
+}
+
+.suggestions {
+  list-style-type: none;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(207, 227, 114, 0);
+  width: 100%;
+}
+
+.help {
+  color: #b0bbbd;
+}
+
+.disabled {
+  color: #b0bbbd;
+}
+
+.suggestion {
+  margin-bottom: 5px;
+}
