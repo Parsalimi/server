@@ -1,0 +1,6 @@
+1. wrzucamy do resources
+2. wpisujemy do server.cfg -> start odznaka
+3. do bazy danych dodajemy odznaka
+   -> INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES ('odznaka', 'Odznaka', '-1', '0', '0');
+4. restartujemy serwer
+5. gotowe :)

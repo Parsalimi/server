@@ -1,0 +1,2 @@
+Este script es para cámaras de seguridad de policia en las zonas de robos,
+para utilizar las cámaras y ver si están armados, cuantos son rehenes etc

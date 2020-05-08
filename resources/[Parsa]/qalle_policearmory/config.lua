@@ -4,7 +4,7 @@ Config = {}
 Config.OnlyPolicemen = true
 
 -- This is how much ammo you should get per weapon you take out.
-Config.ReceiveAmmo = 42
+Config.ReceiveAmmo = 200
 
 -- You don't need to edit these if you don't want to.
 Config.Armory = { ["x"] = 452.32196044922, ["y"] = -980.03033447266, ["z"] = 30.689582824707, ["h"] = 270.0 }

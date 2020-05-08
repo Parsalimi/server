@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <link href="radar.css" rel="stylesheet" type="text/css"/>
+    <script src="html://jquery.js" type="text/javascript"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="radar.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="Radar">
+        <div id="Power" class="poweroff" data-val="off"></div>
+        <div id="platetext">MATRICULA</div>
+        <div id="plate"></div>
+
+        <div id="speedtext">VELOCIDAD</div>
+        <div id="speed"><span>0</span> <small>KMH</small></div>
+
+        <div id="modeltext">MODELO</div>
+        <div id="model"></div>
+
+        <div id="CarSpeedText">VELOCIDAD DEL VEHICULO</div>
+        <div id="CarSpeed"><span>0</span> <small>KMH</small></div>
+        <div id="SpeedLimitText">LIMITE DE VELOCIDAD</div>
+        <div id="SpeedLimit"><span>80</span> <small>KMH</small></div>
+
+        <div id="List">
+            <div style="clear: both; line-height: 25px; margin-bottom: 5px; background-color: black;">
+                <div class="plate">MATRICULA</div>
+                <div class="model">MODELO</div>
+                <div class="speed">VELOCIDAD</div>
+                <div class="speedlimit">LIMITE DE VELOCIDAD</div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="list">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

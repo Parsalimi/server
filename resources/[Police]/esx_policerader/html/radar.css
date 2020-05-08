@@ -1,0 +1,173 @@
+#Radar{
+    position: absolute;
+    background: url('radar.png') center center no-repeat;
+    width: 588px;
+    height: 332px;
+    bottom: 25px;
+    right: 25px;
+}
+
+#Radar #Power{
+    position: absolute;
+    bottom: 55px;
+    left: 23px;
+    width: 16px;
+    height: 17px;
+}
+#Radar #Power.poweroff{
+    background: url('power_off.png') center center no-repeat;
+}
+#Radar #Power.poweron{
+    background: url('power_on.png') center center no-repeat;
+}
+
+#Radar #platetext{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ff0000;
+    font-size:16px;
+    font-weight: bold;
+}
+#Radar #plate{
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+    font-size:16px;
+    font-weight: bold;
+}
+
+#Radar #speedtext{
+    position: absolute;
+    bottom: 225px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ff0000;
+    font-size:16px;
+    font-weight: bold;
+}
+#Radar #speed{
+    position: absolute;
+    bottom: 205px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+    font-size:16px;
+    font-weight: bold;
+}
+
+#Radar #modeltext{
+    position: absolute;
+    bottom: 171px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ff0000;
+    font-size:16px;
+    font-weight: bold;
+}
+#Radar #model{
+    position: absolute;
+    bottom: 154px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+    font-size:16px;
+    font-weight: bold;
+}
+
+#Radar #CarSpeedText{
+    position: absolute;
+    bottom: 115px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ff0000;
+    font-size:16px;
+    font-weight: bold;
+}
+#Radar #CarSpeed{
+    position: absolute;
+    bottom: 98px;
+    left: 70px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+    font-size:16px;
+    font-weight: bold;
+}
+
+
+#Radar #SpeedLimitText{
+    position: absolute;
+    bottom: 65px;
+    right: 411px;
+    font-family: 'Dosis', sans-serif;
+    color:#FF0000;
+    font-size:16px;
+    font-weight: bold;
+}
+#Radar #SpeedLimit{
+    position: absolute;
+    bottom: 35px;
+    right: 411px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+    font-size:26px;
+    font-weight: bold;
+}
+
+#Radar #List{
+    position: absolute;
+    top: 26px;
+    left: 191px; 
+    width: 343px;
+    height: 250px; 
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+}
+
+#Radar #List .list{
+    width: 343px;
+    height: 240px;
+    font-family: 'Dosis', sans-serif;
+    color:#ffffff;
+}
+
+#Radar #List .item{
+    clear: both;
+    height: 30px;
+}
+#Radar #List .plate{
+    float:left; 
+    width: 85px;
+}
+#Radar #List .model{
+    float:left; 
+    width: 100px;
+}
+#Radar #List .speed{
+    float:left; 
+    text-align: right;
+    width: 50px;
+}
+#Radar #List .speedlimit{
+    float:left; 
+    text-align: right;
+    width: 100px;
+}
+
+
+#Radar #List .success{
+    color:yellowgreen;
+    font-weight: bold;
+}
+#Radar #List .warning{
+    color:yellow;
+    font-weight: bold;
+}
+#Radar #List .danger{
+    color:tomato;
+    font-weight: bold;
+}

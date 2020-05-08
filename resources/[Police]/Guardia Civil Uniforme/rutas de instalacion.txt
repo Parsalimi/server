@@ -1,0 +1,15 @@
+-Hombre:
+-Traje:C:\Program Files\Rockstar Games\Grand Theft Auto V\mods\update\x64\dlcpacks\mpheist\dlc.rpf\
+x64\models\cdimages\mpheist_streamedpeds.rpf\mp_m_freemode_01_male_heist
+-Gorra:C:\Program Files\Rockstar Games\Grand Theft Auto V\mods\update\x64\dlcpacks\mpheist\dlc.rpf\
+x64\models\cdimages\mpheist_streamedpeds_p.rpf\mp_m_freemode_01_p_male_heist
+-Placa Cadena: Grand Theft Auto V\mods\update\x64\dlcpacks\mpchristmas2017\dlc.rpf\x64\models\cdimages\mpchristmas2017_male.rpf\mp_m_freemode_01_mp_m_christmas2017
+-GRS: Grand Theft Auto V\mods\update\x64\dlcpacks\mpheist3\dlc.rpf\x64\models\cdimages\mpheist3_male.rpf\mp_m_freemode_01_mp_m_heist3
+
+-Mujer:
+-Traje C:\Program Files\Rockstar Games\Grand Theft Auto V\mods\update\x64\dlcpacks\mpheist\dlc.rpf\
+x64\models\cdimages\mpheist_streamedpeds.rpf\mp_f_freemode_01_female_heist
+-Gorra C:\Program Files\Rockstar Games\Grand Theft Auto V\mods\update\x64\dlcpacks\mpheist\dlc.rpf\
+x64\models\cdimages\mpheist_streamedpeds_p.rpf\mp_f_freemode_01_p_female_heist
+-Placa Cadena: Grand Theft Auto V\mods\update\x64\dlcpacks\mpchristmas2017\dlc.rpf\x64\models\cdimages\mpchristmas2017_female.rpf\mp_f_freemode_01_mp_f_christmas2017
+-GRS: Grand Theft Auto V\mods\update\x64\dlcpacks\mpheist3\dlc.rpf\x64\models\cdimages\mpheist3_female.rpf\mp_f_freemode_01_mp_f_heist3

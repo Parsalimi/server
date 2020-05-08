@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="mainbar">
+			<div class="show_bar_2">
+				<div id="healthbar"></div>
+			</div>
+			<div class="show_bar_2">
+				<div id="armorbar"></div>
+			</div>
+		</div>
+		<div id="bar">
+			<div class="show_bar_3" id="foodbox">
+				<div id="foodbar"></div>
+			</div>
+			<div class="show_bar_3" id="thirstbox">
+				<div id="thirstbar"></div>
+			</div>
+			<div class="show_bar_3" id="voipbox">
+				<div id="voipbar"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<style type="text/css">
+	body {
+	    overflow: hidden;
+	    height:1080px;
+	    width:100%;
+	}
+
+	#container {
+		height: 30px;
+		width: 14.1%;
+		padding: 0;
+		margin: 0;
+		float: left;
+		position: absolute;
+		left: 1.50%;
+    	bottom: 1.2%;
+	}
+
+	.mainbar {
+		float: left;
+		width: 100%;
+		height: 50%;
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+
+	#bar {
+		float: left;
+		width: 100%;
+		height: 50%;
+		padding:0px;
+		background-color: rgba(0, 0, 0, 0.9);
+		overflow: hidden;
+	}
+
+	.show_bar_2 {
+		float: left;
+		width: calc(100%/2 - 4px);
+		height: calc(100% - 4px);
+		background-color: rgba(59, 68, 75, 0.9);
+		margin: 2px;
+		overflow: hidden;
+	}
+
+	.show_bar_3 {
+		float: left;
+		width: calc(100%/3 - 4px);
+		height: calc(100% - 4px);
+		background-color: rgba(59, 68, 75, 0.9);
+		margin: 2px;
+		overflow: hidden;
+	}
+	.show_bar_4 {
+		float: left;
+		width: calc(100%/4 - 4px);
+		height: calc(100% - 4px);
+		background-color: rgba(59, 68, 75, 0.9);
+		margin: 2px;
+		overflow: hidden;
+	}
+
+	.show_bar_2 div, .show_bar_3 div, .show_bar_4 div {
+		width: 100%;
+	}
+
+	#foodbar {
+		background-color: #ffcc5c;
+		width: 50%;
+		height: 100%;
+	}
+
+	#thirstbar {
+		background-color: #1ca3ec;
+		width: 75%;
+		height: 100%;
+	}
+
+	#voipbar {
+		background-color: #c0c5ce;
+		width: 10%;
+		height: 100%;
+	}
+
+	#healthbar {
+		background-color: #528952;
+		height: 100%;
+		width: 75%;
+	}
+
+	#armorbar {
+		background-color: #2771A3;
+		height: 100%;
+	}
+
+</style>
