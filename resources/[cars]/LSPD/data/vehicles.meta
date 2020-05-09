@@ -3,7 +3,7 @@
 	<residentTxd>vehshare</residentTxd>
 	<residentAnims />
 	<InitDatas>
-	<Item>
+	<sItem>
       <modelName>POLICE3</modelName>
       <txdName>POLICE3</txdName>
       <handlingId>BALLER2</handlingId>

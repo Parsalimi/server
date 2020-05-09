@@ -1,60 +1,62 @@
-Config                            = {}
+Config = {}
 
-Config.DrawDistance               = 100.0
+Config.DrawDistance = 100.0
 
-Config.NPCJobEarnings             = {min = 300, max = 600}
-Config.MinimumDistance            = 3000 -- Minimum NPC job destination distance from the pickup in GTA units, a higher number prevents nearby destionations.
+Config.NPCJobEarnings = { min = 300, max = 600 }
+Config.MinimumDistance = 3000 -- Minimum NPC job destination distance from the pickup in GTA units, a higher number prevents nearby destionations.
 
-Config.MaxInService               = -1
-Config.EnablePlayerManagement     = true
+Config.MaxInService = -1
+Config.EnablePlayerManagement = true1
 Config.EnableSocietyOwnedVehicles = false
 
-Config.Locale                     = 'en'
+
+Config.Locale = 'en'
 
 Config.AuthorizedVehicles = {
-
 	{
 		model = 'taxi',
 		label = 'Taxi'
+	}, {
+		model = 'taxi4',
+		label = 'Alfa Romeo',
 	}
-
 }
 
 Config.Zones = {
-
 	VehicleSpawner = {
-		Pos   = {x = 891.9, y = -160.68, z = 76.39},
-		Size  = {x = 1.0, y = 1.0, z = 1.0},
-		Color = {r = 204, g = 204, b = 0},
-		Type  = 36, Rotate = true
+		Pos = { x = 891.9, y = -160.68, z = 76.39 },
+		Size = { x = 1.0, y = 1.0, z = 1.0 },
+		Color = { r = 204, g = 204, b = 0 },
+		Type = 36,
+		Rotate = true
 	},
-
 	VehicleSpawnPoint = {
-		Pos     = {x = 896.96, y = -153.63, z = 76.57},
-		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Type    = -1, Rotate = false,
+		Pos = { x = 896.96, y = -153.63, z = 76.57 },
+		Size = { x = 1.5, y = 1.5, z = 1.0 },
+		Type = -1,
+		Rotate = false,
 		Heading = 331.39
 	},
-
 	VehicleDeleter = {
-		Pos   = {x = 896.96, y = -153.63, z = 75.50},
-		Size  = {x = 3.0, y = 3.0, z = 0.4},
-		Color = {r = 255, g = 0, b = 0},
-		Type  = 1, Rotate = false
+		Pos = { x = 896.96, y = -153.63, z = 75.50 },
+		Size = { x = 3.0, y = 3.0, z = 0.4 },
+		Color = { r = 255, g = 0, b = 0 },
+		Type = 1,
+		Rotate = false
 	},
-
 	TaxiActions = {
-		Pos   = {x = 910.45, y = -152.59, z = 74.0},
-		Size  = {x = 1.0, y = 1.0, z = 1.0},
-		Color = {r = 204, g = 204, b = 0},
-		Type  = 20, Rotate = true
+		Pos = { x = 910.45, y = -152.59, z = 74.0 },
+		Size = { x = 1.0, y = 1.0, z = 1.0 },
+		Color = { r = 204, g = 204, b = 0 },
+		Type = 20,
+		Rotate = true
 	},
-
 	Cloakroom = {
-		Pos     = {x = 888.35, y = -153.89, z = 76.39},
-		Size    = {x = 1.0, y = 1.0, z = 1.0},
-		Color   = {r = 204, g = 204, b = 0},
-		Type    = 21, Rotate = true
+		Pos = { x = 888.35, y = -153.89, z = 76.39 },
+		Size = { x = 1.0, y = 1.0, z = 1.0 },
+		Color = { r = 204, g = 204, b = 0 },
+		Type = 21,
+		Rotate = true
 	}
 }
 
