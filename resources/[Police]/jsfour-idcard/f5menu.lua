@@ -36,12 +36,12 @@ function openMenu()
 	{
 		title    = 'ID menu',
 		elements = {
-			{label = 'Ver tu DNI', value = 'checkID'},
-			{label = 'Mostrar tu DNI', value = 'showID'},
-			{label = 'Ver tu licencia de conducir', value = 'checkDriver'},
-			{label = 'Mostrar tu licencia de conducir', value = 'showDriver'},
-			{label = 'Ver tu licencia de armas', value = 'checkFirearms'},
-			{label = 'Mostrar tu licencia de armas', value = 'showFirearms'},
+			{label = '🆔Kart Meli ro bebinam', value = 'checkID'},
+			{label = '🆔Kart Meli ro Neshon bedam', value = 'showID'},
+			{label = '🚘Govahi Name ranandegi ro bebinam', value = 'checkDriver'},
+			{label = '🚘Govahi Name ranandegi ro Neshon bedam', value = 'showDriver'},
+			{label = '🔫Mojavez Asalhe ro bebinam', value = 'checkFirearms'},
+			{label = '🔫Mojavez Asalhe ro neshon bedam', value = 'showFirearms'},
 		}
 	},
 	function(data, menu)

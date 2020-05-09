@@ -1,7 +1,7 @@
 --====================================================================================
 -- #Author: Jonathan D @ Gannon
 --====================================================================================
- 
+
 -- Configuration
 local KeyToucheCloseEvent = {
   { code = 172, event = 'ArrowUp' },
@@ -11,7 +11,7 @@ local KeyToucheCloseEvent = {
   { code = 176, event = 'Enter' },
   { code = 177, event = 'Backspace' },
 }
-local KeyOpenClose = 288 -- F2
+local KeyOpenClose = 288 -- F1 root
 local KeyTakeCall = 38 -- E
 local menuIsOpen = false
 local contacts = {}
@@ -62,21 +62,19 @@ function hasPhone (cb)
     cb(qtty > 0)
   end, 'phone')
 end
-function ShowNoPhoneWarning () 
+function ShowNoPhoneWarning ()
   if (ESX == nil) then return end
-  ESX.ShowNotification("Shoma ~r~goshi ~w~nadarid!")
+  exports['rootNotify']:showNotification('error', 'Önce bir telefon almalısın', 'Uyarı', 1500)
 end
 
-
-
 --====================================================================================
---  
+--
 --====================================================================================
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
     if takePhoto ~= true then
-      if IsControlJustPressed(1, KeyOpenClose) then
+      if IsControlJustPressed(1, KeyOpenClose)  then
         hasPhone(function (hasPhone)
           if hasPhone == true then
             TooglePhone()
@@ -86,6 +84,7 @@ Citizen.CreateThread(function()
         end)
       end
       if menuIsOpen == true then
+	   DisableControlAction(0, 289, true)   -- This will disable "F2" key while phonemenu is active.
         for _, value in ipairs(KeyToucheCloseEvent) do
           if IsControlJustPressed(1, value.code) then
             SendNUIMessage({keyUp = value.event})
@@ -122,7 +121,7 @@ end)
 --====================================================================================
 --  Gestion des appels fixe
 --====================================================================================
---[[function startFixeCall (fixeNumber)
+function startFixeCall (fixeNumber)
   local number = ''
   DisplayOnscreenKeyboard(1, "FMMC_MPM_NA", "", "", "", "", "", 10)
   while (UpdateOnscreenKeyboard() == 0) do
@@ -147,12 +146,12 @@ end
 RegisterNetEvent("gcPhone:notifyFixePhoneChange")
 AddEventHandler("gcPhone:notifyFixePhoneChange", function(_PhoneInCall)
   PhoneInCall = _PhoneInCall
-end)--]]
+end)
 
 --[[
   Affiche les imformations quant le joueurs est proche d'un fixe
 --]]
---[[function showFixePhoneHelper (coords)
+function showFixePhoneHelper (coords)
   for number, data in pairs(FixePhone) do
     local dist = GetDistanceBetweenCoords(
       data.coords.x, data.coords.y, data.coords.z,
@@ -167,17 +166,17 @@ end)--]]
       break
     end
   end
-end--]]
- 
+end
 
---[[ Citizen.CreateThread(function ()
+
+Citizen.CreateThread(function ()
   local mod = 0
-  while true do 
+  while true do
     local playerPed   = PlayerPedId()
     local coords      = GetEntityCoords(playerPed)
     local inRangeToActivePhone = false
     local inRangedist = 0
-    for i, _ in pairs(PhoneInCall) do 
+    for i, _ in pairs(PhoneInCall) do
         local dist = GetDistanceBetweenCoords(
           PhoneInCall[i].coords.x, PhoneInCall[i].coords.y, PhoneInCall[i].coords.z,
           coords.x, coords.y, coords.z, 1)
@@ -186,7 +185,7 @@ end--]]
               0,0,0, 0,0,0, 0.1,0.1,0.1, 0,255,0,255, 0,0,0,0,0,0,0)
           inRangeToActivePhone = true
           inRangedist = dist
-          if (dist <= 1.5) then 
+          if (dist <= 1.5) then
             SetTextComponentFormat("STRING")
             AddTextComponentString("~INPUT_PICKUP~ Décrocher")
             DisplayHelpTextFromStringLabel(0, 0, 1, -1)
@@ -218,7 +217,7 @@ end--]]
     end
     Citizen.Wait(0)
   end
-end) --]]
+end)
 
 
 function PlaySoundJS (sound, volume)
@@ -250,7 +249,7 @@ AddEventHandler("gcPhone:forceOpenPhone", function(_myPhoneNumber)
     TooglePhone()
   end
 end)
- 
+
 --====================================================================================
 --  Events
 --====================================================================================
@@ -283,12 +282,12 @@ AddEventHandler("gcPhone:receiveMessage", function(message)
   SendNUIMessage({event = 'newMessage', message = message})
   table.insert(messages, message)
   if message.owner == 0 then
-    local text = '~o~Peygham Jadid'
+    local text = '~o~Yeni mesaj'
     if ShowNumberNotification == true then
-      text = '~o~Peygham Jadid az taraf: ~y~'.. message.transmitter
+      text = '~o~Yeni mesaj ~y~'.. message.transmitter
       for _,contact in pairs(contacts) do
         if contact.number == message.transmitter then
-          text = '~o~Peygham Jadid az taraf: ~g~'.. contact.display
+          text = '~o~Yeni mesaj ~g~'.. contact.display
           break
         end
       end
@@ -307,11 +306,11 @@ end)
 --====================================================================================
 --  Function client | Contacts
 --====================================================================================
-function addContact(display, num) 
+function addContact(display, num)
     TriggerServerEvent('gcPhone:addContact', display, num)
 end
 
-function deleteContact(num) 
+function deleteContact(num)
     TriggerServerEvent('gcPhone:deleteContact', num)
 end
 --====================================================================================
@@ -323,7 +322,7 @@ end
 
 function deleteMessage(msgId)
   TriggerServerEvent('gcPhone:deleteMessage', msgId)
-  for k, v in ipairs(messages) do 
+  for k, v in ipairs(messages) do
     if v.id == msgId then
       table.remove(messages, k)
       SendNUIMessage({event = 'updateMessages', messages = messages})
@@ -342,7 +341,7 @@ end
 
 function setReadMessageNumber(num)
   TriggerServerEvent('gcPhone:setReadMessageNumber', num)
-  for k, v in ipairs(messages) do 
+  for k, v in ipairs(messages) do
     if v.transmitter == num then
       v.isRead = 1
     end
@@ -383,7 +382,7 @@ AddEventHandler("gcPhone:acceptCall", function(infoCall, initiator)
     NetworkSetVoiceChannel(infoCall.id + 1)
     NetworkSetTalkerProximity(0.0)
   end
-  if menuIsOpen == false then 
+  if menuIsOpen == false then
     TooglePhone()
   end
   PhonePlayCall()
@@ -424,7 +423,7 @@ function ignoreCall(infoCall)
   TriggerServerEvent('gcPhone:ignoreCall', infoCall)
 end
 
-function requestHistoriqueCall() 
+function requestHistoriqueCall()
   TriggerServerEvent('gcPhone:getHistoriqueCall')
 end
 
@@ -435,7 +434,7 @@ end
 function appelsDeleteAllHistorique ()
   TriggerServerEvent('gcPhone:appelsDeleteAllHistorique')
 end
-  
+
 
 --====================================================================================
 --  Event NUI - Appels
@@ -562,7 +561,7 @@ end)
 
 --====================================================================================
 --  Gestion des evenements NUI
---==================================================================================== 
+--====================================================================================
 RegisterNUICallback('log', function(data, cb)
   print(data)
   cb()
@@ -576,7 +575,7 @@ end)
 RegisterNUICallback('reponseText', function(data, cb)
   local limit = data.limit or 255
   local text = data.text or ''
-  
+
   DisplayOnscreenKeyboard(1, "FMMC_MPM_NA", "", text, "", "", "", limit)
   while (UpdateOnscreenKeyboard() == 0) do
       DisableAllControlActions(0);
@@ -619,7 +618,7 @@ end)
 --====================================================================================
 --  Event - Contacts
 --====================================================================================
-RegisterNUICallback('addContact', function(data, cb) 
+RegisterNUICallback('addContact', function(data, cb)
   TriggerServerEvent('gcPhone:addContact', data.display, data.phoneNumber)
 end)
 RegisterNUICallback('updateContact', function(data, cb)
@@ -640,7 +639,7 @@ end)
 RegisterNUICallback('callEvent', function(data, cb)
   local eventName = data.eventName or ''
   if string.match(eventName, 'gcphone') then
-    if data.data ~= nil then 
+    if data.data ~= nil then
       TriggerEvent(data.eventName, data.data)
     else
       TriggerEvent(data.eventName)
@@ -660,10 +659,10 @@ end)
 
 
 
-function TooglePhone() 
+function TooglePhone()
   menuIsOpen = not menuIsOpen
   SendNUIMessage({show = menuIsOpen})
-  if menuIsOpen == true then 
+  if menuIsOpen == true then
     PhonePlayIn()
   else
     PhonePlayOut()
@@ -716,6 +715,14 @@ RegisterNUICallback('setIgnoreFocus', function (data, cb)
 end)
 
 
+----------------------------------
+----------MUGSHOT             ----
+----------------------------------
+RegisterNUICallback('getMugshot', function (data, cb)
+  local url = exports["mugshot"]:getMugshotUrl(GetPlayerPed(-1))
+  cb(json.encode({ url = url }))
+end)
+
 
 
 
@@ -751,12 +758,20 @@ RegisterNUICallback('takePhoto', function(data, cb)
       takePhoto = false
       break
     elseif IsControlJustPressed(1, 176) then -- TAKE.. PIC
-			exports['screenshot-basic']:requestScreenshotUpload(data.url, data.field, function(data)
-        local resp = json.decode(data)
-        DestroyMobilePhone()
-        CellCamActivate(false, false)
-        cb(json.encode({ url = resp.files[1].url }))   
-      end)
+		exports['screenshot-basic']:requestScreenshotUpload(data.url, data.field, function(data)
+            local resp = json.decode(data)
+            DestroyMobilePhone()
+            CellCamActivate(false, false)
+            cb(json.encode({ url = resp.files[1].url }))
+         end)
+		 
+		 exports['screenshot-basic']:requestScreenshotUpload(data.url, data.field, {encoding = 'jpg', x = 0, y = 0, w = 1920, h = 1080}, function(data)
+			local resp = json.decode(data)
+            DestroyMobilePhone()
+            CellCamActivate(false, false)
+            cb(json.encode({ url = resp.files[1].url }))
+		 end)
+
       takePhoto = false
 		end
 		HideHudComponentThisFrame(7)
@@ -768,4 +783,15 @@ RegisterNUICallback('takePhoto', function(data, cb)
   end
   Citizen.Wait(1000)
   PhonePlayAnim('text', false, true)
+end)
+
+
+RegisterNUICallback('getMugshot', function(data, cb)
+	while takePhoto do
+    Citizen.Wait(0)
+
+		local url = exports["mugshot"]:getMugshotUrl(GetPlayerPed(-1))
+		cb(url)
+  end
+  Citizen.Wait(1000)
 end)

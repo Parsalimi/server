@@ -11,10 +11,10 @@ Config.EnableESXIdentity          = true
 Config.EnableNonFreemodePeds      = false
 Config.EnableLicenses             = true
 
-Config.EnableHandcuffTimer        = true
+Config.EnableHandcuffTimer        = false
 Config.HandcuffTimer              = 10 * 60000
 
-Config.EnableJobBlip              = false
+Config.EnableJobBlip              = true
 
 Config.MaxInService               = -1
 Config.Locale                     = 'en'
@@ -24,7 +24,7 @@ Config.PoliceStations = {
 	LSPD = {
 
 		Blip = {
-			Coords  = vector3(-1098.1, -831.5, 14.7),
+			Coords  = vector3(425.1, -979.5, 30.7),
 			Sprite  = 60,
 			Display = 4,
 			Scale   = 1.2,
@@ -32,46 +32,47 @@ Config.PoliceStations = {
 		},
 
 		Cloakrooms = {
-			vector3(-1098.6, -831.8, 14.6)
+			vector3(452.6, -992.8, 30.6)
 		},
 
 		Armories = {
-			vector3(-1105.68, -822.65, 14.69)
+			vector3(460.05, -979.71, 30.6)
 		},
 
 		Vehicles = {
 			{
-				Spawner = vector3(-1068.6, -857.4, 4.4),
-				InsideShop = vector3(-1078.5, -845.5, 4.5),
+				Spawner = vector3(454.6, -1017.4, 28.4),
+				InsideShop = vector3(228.5, -993.5, -99.5),
 				SpawnPoints = {
-					{ coords = vector3(-1065.4, -856.3, 4.7), heading = 215.0, radius = 6.0 },
-					{ coords = vector3(-1056.0, -858.2, 4.7), heading = 156.0, radius = 6.0 },
-					{ coords = vector3(-1075.5, -867.2, 5.0), heading = 261.0, radius = 6.0 }
+					{ coords = vector3(438.4, -1018.3, 27.7), heading = 90.0, radius = 6.0 },
+					{ coords = vector3(441.0, -1024.2, 28.3), heading = 90.0, radius = 6.0 },
+					{ coords = vector3(453.5, -1022.2, 28.0), heading = 90.0, radius = 6.0 },
+					{ coords = vector3(450.9, -1016.5, 28.1), heading = 90.0, radius = 6.0 }
 				}
 			},
 
 			{
-				Spawner = vector3(-1117.3, -845.8, 14.0),
-				InsideShop = vector3(-1113.5, -834.5, 14.0),
+				Spawner = vector3(473.3, -1018.8, 28.0),
+				InsideShop = vector3(228.5, -993.5, -99.0),
 				SpawnPoints = {
-					{ coords = vector3(-1130.9, -840.6, 14.0), heading = 134.1, radius = 6.0 },
-					{ coords = vector3(-1124.1, -849.1, 14.0), heading = 126.5, radius = 6.0 }
+					{ coords = vector3(475.9, -1021.6, 28.0), heading = 276.1, radius = 6.0 },
+					{ coords = vector3(484.1, -1023.1, 27.5), heading = 302.5, radius = 6.0 }
 				}
 			}
 		},
 
 		Helicopters = {
 			{
-				Spawner = vector3(-1094.1, -840.5, 37.6),
-				InsideShop = vector3(-1096.0, -832.4, 38.0),
+				Spawner = vector3(461.1, -981.5, 43.6),
+				InsideShop = vector3(477.0, -1106.4, 43.0),
 				SpawnPoints = {
-					{ coords = vector3(-1096.5, -832.2, 37.6), heading = 306.6, radius = 10.0 }
+					{ coords = vector3(449.5, -981.2, 43.6), heading = 92.6, radius = 10.0 }
 				}
 			}
 		},
 
 		BossActions = {
-			vector3(-1114.4, -831.2, 34.6)
+			vector3(448.4, -973.2, 30.6)
 		}
 
 	}
@@ -80,159 +81,111 @@ Config.PoliceStations = {
 
 Config.AuthorizedWeapons = {
 	recruit = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
-		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
+		{ weapon = 'WEAPON_STUNGUN', price = 1500 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 80 }
 	},
 
 	officer = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
+		{ weapon = 'WEAPON_STUNGUN', price = 500 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
 	sergeant = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
-		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 7000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
-		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
-	},
-
-	intendent = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
-		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
-		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
+		{ weapon = 'WEAPON_STUNGUN', price = 500 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
 	lieutenant = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
-		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 10000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
+		{ weapon = 'WEAPON_STUNGUN', price = 500 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
-	chef = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
-		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
+	chief = {
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 10000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
+		{ weapon = 'WEAPON_STUNGUN', price = 500 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
 	boss = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_CARBINERIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
-		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 10000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_STUNGUN', price = 0 },
+		{ weapon = 'WEAPON_STUNGUN', price = 500 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	}
 }
 
 Config.AuthorizedVehicles = {
 	Shared = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
+		{ model = 'policet', label = 'Police Transporter', price = 10000 },
+		{ model = 'police', label = 'Police Cruiser', price = 10000 },
+		{ model = 'pbus', label = 'Police Prison Bus', price = 10000 },
+		{ model = 'policeb', label = 'Police Bike', price = 10000 }
 
 	},
 
 	recruit = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
+
 	},
 
 	officer = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'police3', label = 'Patrulla Oficial', price = 1 },
-		{ model = 'sheriff2', label = 'Patrulla Todoterreno oficial', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
-		
+		{ model = '2015polstang', label = 'Police Mustang', livery = 1, price = 10000 },
+		{ model = 'police3', label = 'Police Interceptor', price = 10000 }
 	},
 
 	sergeant = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'police3', label = 'Patrulla Oficial', price = 1 },
-		{ model = 'sheriff2', label = 'Patrulla Todoterreno oficial', price = 1 },
-		{ model = 'fbi2', label = 'Mossos SWAT', price = 1 },
-		{ model = '2015polstang', label = 'Patrulla Sargento', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
-        },
+		{ model = 'riot', label = 'Police Riot', price = 10000 },
+		{ model = 'fbi2', label = 'FIB SUV', price = 10000 },
+		{ model = '2015polstang', label = 'Police Mustang', livery = 1, price = 10000 },
+		{ model = 'police3', label = 'Police Interceptor', price = 10000 }
+	},
 
 	intendent = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'police3', label = 'Patrulla Oficial', price = 1 },
-		{ model = 'sheriff2', label = 'Patrulla Todoterreno oficial', price = 1 },
-		{ model = 'fbi2', label = 'Mossos SWAT', price = 1 },
-		{ model = '2015polstang', label = 'Patrulla Sargento', price = 1 },
-		{ model = 'ghispo2', label = 'Patrulla Teniente', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
+		{ model = 'riot', label = 'Police Riot', price = 10000 },
+		{ model = 'fbi2', label = 'FIB SUV', price = 10000 },
+		{ model = '2015polstang', label = 'Police Mustang', livery = 1, price = 10000 },
+		{ model = 'police3', label = 'Police Interceptor', price = 10000 }
+
 	},
 
 	lieutenant = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'police3', label = 'Patrulla Oficial', price = 1 },
-		{ model = 'sheriff2', label = 'Patrulla Todoterreno oficial', price = 1 },
-		{ model = 'fbi2', label = 'Mossos SWAT', price = 1 },
-		{ model = '2015polstang', label = 'Patrulla Sargento', price = 1 },
-		{ model = 'ghispo2', label = 'Patrulla Teniente', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
-        },
+		{ model = 'riot', label = 'Police Riot', price = 10000 },
+		{ model = 'fbi2', label = 'FIB SUV', price = 10000 },
+		{ model = '2015polstang', label = 'Police Mustang', livery = 1, price = 10000 },
+		{ model = 'police3', label = 'Police Interceptor', price = 10000 }
+	},
 
 	chef = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'police3', label = 'Patrulla Oficial', price = 1 },
-		{ model = 'sheriff2', label = 'Patrulla Todoterreno oficial', price = 1 },
-		{ model = 'fbi2', label = 'Mossos SWAT', price = 1 },
-		{ model = '2015polstang', label = 'Patrulla Sargento', price = 1 },
-		{ model = 'ghispo2', label = 'Patrulla Teniente', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 },
-		{ model = 'challenger18', label = 'Patrulla Demon', price = 1 }
+		{ model = 'riot', label = 'Police Riot', price = 10000 },
+		{ model = 'fbi2', label = 'FIB SUV', price = 10000 },
+		{ model = '2015polstang', label = 'Police Mustang', livery = 1, price = 10000 },
+		{ model = 'police3', label = 'Police Interceptor', price = 10000 }
+
 	},
 
 	boss = {
-		{ model = 'police2', label = 'Patrulla Recluta', price = 1 },
-		{ model = 'sheriff', label = 'Patrulla Todoterreno', price = 1 },
-		{ model = 'policeb', label = 'Patrulla en Moto', price = 1 },
-		{ model = 'police3', label = 'Patrulla Oficial', price = 1 },
-		{ model = 'sheriff2', label = 'Patrulla Todoterreno oficial', price = 1 },
-		{ model = 'fbi2', label = 'Mossos SWAT', price = 1 },
-		{ model = '2015polstang', label = 'Patrulla Sargento', price = 1 },
-		{ model = 'ghispo2', label = 'Patrulla Teniente', price = 1 },
-		{ model = 'challenger18', label = 'Patrulla Demon', price = 1 },
-		{ model = 'policeb1', label = 'Patrulla Hakuchou', price = 1 },
-		{ model = 'policeb2', label = 'Patrulla BF400', price = 1 }
+		{ model = 'riot', label = 'Police Riot', price = 10000 },
+		{ model = 'fbi2', label = 'FIB SUV', price = 10000 },
+		{ model = '2015polstang', label = 'Police Mustang', livery = 1, price = 10000 },
+		{ model = 'police3', label = 'Police Interceptor', price = 10000 }
+
 	}
 }
 
@@ -242,39 +195,38 @@ Config.AuthorizedHelicopters = {
 	officer = {},
 
 	sergeant = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 20 }
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 200000 }
 	},
 
 	intendent = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 20 }
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 200000 }
 	},
 
 	lieutenant = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 20 }
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 200000 }
 	},
 
 	chef = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 10 }
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 150000 }
 	},
 
 	boss = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 10 }
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 100000 }
 	}
 }
 
 Config.Uniforms = {
 	recruit_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 59,  ['tshirt_2'] = 1,
 			['torso_1'] = 55,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = 46,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 36,  ['tshirt_2'] = 1,
@@ -290,16 +242,15 @@ Config.Uniforms = {
 	},
 	officer_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 58,  ['tshirt_2'] = 0,
 			['torso_1'] = 55,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,	
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
@@ -315,16 +266,15 @@ Config.Uniforms = {
 	},
 	sergeant_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 58,  ['tshirt_2'] = 0,
 			['torso_1'] = 55,   ['torso_2'] = 0,
-			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,
+			['decals_1'] = 8,   ['decals_2'] = 1,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
@@ -340,16 +290,15 @@ Config.Uniforms = {
 	},
 	intendent_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 58,  ['tshirt_2'] = 0,
 			['torso_1'] = 55,   ['torso_2'] = 0,
-			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,
+			['decals_1'] = 8,   ['decals_2'] = 2,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
@@ -365,16 +314,15 @@ Config.Uniforms = {
 	},
 	lieutenant_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 58,  ['tshirt_2'] = 0,
 			['torso_1'] = 55,   ['torso_2'] = 0,
-			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,
+			['decals_1'] = 8,   ['decals_2'] = 2,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
@@ -390,16 +338,15 @@ Config.Uniforms = {
 	},
 	chef_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 58,  ['tshirt_2'] = 0,
 			['torso_1'] = 55,   ['torso_2'] = 0,
-			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,	
+			['decals_1'] = 8,   ['decals_2'] = 3,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
@@ -415,16 +362,15 @@ Config.Uniforms = {
 	},
 	boss_wear = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 58,  ['tshirt_2'] = 0,
 			['torso_1'] = 55,   ['torso_2'] = 0,
-			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 52,
-			['pants_1'] = 52,   ['pants_2'] = 0,
-			['shoes_1'] = 35,   ['shoes_2'] = 0,
-			['helmet_1'] = 28,  ['helmet_2'] = 0,
-			['chain_1'] = -1,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0,
-			['bags_1'] = 70,
+			['decals_1'] = 8,   ['decals_2'] = 3,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
 			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
@@ -440,7 +386,7 @@ Config.Uniforms = {
 	},
 	bullet_wear = {
 		male = {
-			['bproof_1'] = 7,  ['bproof_2'] = 0
+			['bproof_1'] = 11,  ['bproof_2'] = 1
 		},
 		female = {
 			['bproof_1'] = 13,  ['bproof_2'] = 1

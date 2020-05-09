@@ -27,19 +27,19 @@ Config["alert_section"] = {
 -- ถ้าเป็นไฟล์ Server ให้ TriggerClientEvent("scotty-policealert:getalertNet", source, "thief") -- เปลี่ยน event ได้
 
 --Possible Value: top topLeft topCenter topRight bottom bottomLeft bottomCenter bottomRight center centerLeft centerRight
-Config["alert_position"] = "topLeft" -- ใช้ร่วมกับ pNotify
+Config["alert_position"] = "topRight" -- ใช้ร่วมกับ pNotify
 
 Config["translate"] = {
 	title = "",
-	male = "hombre",
-	female = "mujer",
-	text = "มี <span style=\"color:red;\">%s</span> Una persona está% s en <span style=\"color:lightblue;\">%s</span>",
-	tip = "Para marcar la escena",
-	action_carjacking = "Robo de coche",
-	action_melee = "Pelea callejera",
-	action_gunshot = "Disparos/Tiroteo",
-	action_fishing = "Pesca ilegal",
-	action_burglary = "Robo de casa",
-	action_drug = "Venta de drogas",
-	action_thief = "Robar a alguien"
+	male = "Mard",
+	female = "Zan",
+	text = "Yek <span style=\"color:red;\">%s</span> % s dar <span style=\"color:lightblue;\">%s</span>",
+	tip = "Bezan Baraye moshakhas kardn mantaghe",
+	action_carjacking = "Serghat az Mashin Kard",
+	action_melee = "Mobareze Khiabani Mikonad",
+	action_gunshot = "Tirandazi Kard",
+	action_fishing = "Mahigir gheir ghanoni Kard",
+	action_burglary = "serghat az khane Kard",
+	action_drug = "Forosh Mavad Kard",
+	action_thief = "Kasi ra dozdid Kard"
 }

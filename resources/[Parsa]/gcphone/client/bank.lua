@@ -18,7 +18,7 @@ end
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(playerData)
       local accounts = playerData.accounts or {}
-      for index, account in ipairs(accounts) do 
+      for index, account in ipairs(accounts) do
             if account.name == 'bank' then
                   setBankBalance(account.money)
                   break
@@ -46,4 +46,10 @@ end)
 RegisterNetEvent('es:displayBank')
 AddEventHandler('es:displayBank', function(bank)
       setBankBalance(bank)
+end)
+
+RegisterNUICallback('bank_makeTransfer', function(data)
+    TriggerServerEvent('bank:transfer', data.iban, data.amount)
+    TriggerServerEvent('bank:balance')
+    SendNUIMessage({event = 'transferSuccess', banking = data.balance - data.amount})
 end)

@@ -40,10 +40,10 @@ ESX.RegisterUsableItem('odznaka', function(source)
 	local name = getIdentity(source)
 	local czy_wazna
 	if job.name == "police" then
-		czy_wazna = "~g~Tak"
+		czy_wazna = "~g~baraye shoma hast"
 	else
-		job.grade_label = "~r~Brak informacji"
-		czy_wazna = "~r~Nie"
+		job.grade_label = "~r~ozv sazman nistid"
+		czy_wazna = "~r~baraye shoma nist"
 	end
-	TriggerClientEvent('esx:dowod_pokazOdznake', -1,_source, '~h~'..name.firstname..' '..name.lastname, 'Odznaka LSPD' , 'Stopień ~b~'..job.grade_label..'~s~~n~Odznaka jest ważna '..czy_wazna)
+	TriggerClientEvent('esx:dowod_pokazOdznake', -1,_source, '~h~'..name.firstname..' '..name.lastname, 'Edare Agahi' , 'Daraje ~b~'..job.grade_label..'~s~~n~Vaziat Neshan '..czy_wazna)
 end)
