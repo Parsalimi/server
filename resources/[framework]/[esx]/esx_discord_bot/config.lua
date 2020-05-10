@@ -1,12 +1,12 @@
 Config                        = {}
-Config.Locale 				  = 'fr'
+Config.Locale 				  = 'en'
 Config.green 				  = 56108
 Config.grey 				  = 8421504
 Config.red 					  = 16711680
 Config.orange 				  = 16744192
 Config.blue 				  = 2061822
 Config.purple 				  = 11750815
-Config.webhook                = "NzA4NzgyNTQ2ODAwMDgyOTg1.XrcXWw.i-a9dU7h7C98qYfwKG-f0F83oRI"
+Config.webhook                = "https://discordapp.com/api/webhooks/709108439996956813/sAqMHNKX0ayC7I91hr2Ow5lqBsSggA8SfDAL822M-Cv3bkbdXbuST-cLtNNO_naqY1Yb"
 
 
 settings = {
@@ -36,4 +36,5 @@ blacklistedModels = {
 	"TITAN",
 	"LAZER",
 	"LAZER",
+	"neon"
 }
