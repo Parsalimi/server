@@ -7,49 +7,43 @@
 	<div class="full-screen">
 		<div class="question-container">
 			<!-- header -->
-			<div class="header">
-				<h1>Auto-école</h1>
+			<div class="header rtl">
+				<h1>آموزشگاه رانندگی</h1>
 			</div>
 			<!-- home -->
 			<div class="body home">
-				<div class="content">
+				<div class="content rtl">
 					<!-- ICI BREVE PRESENTATION -->
 					<center>
 						<img src="dmv.png" class="logo">
 						<br>
-						<p class="bold-text">Bienvenu à votre Auto-école
+						<p class="bold-text">به مدرسه رانندگی خود خوش آمدید
 					</center>
 					<br>
-					<center>Tous les citoyens de Los Santos doivent réussir leur examen de code avant de pouvoir conduire.
-						<br>Prenez votre temps, répondez avec du bon sens, ne répondez pas au hasard.
+					<center>همه شهروندان شهر باید قبل از رانندگی ،آزمون آیین نامه  خود را پشت سر بگذارند.
 						<br>
 						<br>
 					</center>
-					Examen de Code
-					<br> - L'examen de code coute 200$, cela n'est pas remboursé si vous échouez.
-					<br> - N'ayez pas peur, l'auto-école accepte les crédits, mais faite attention à ne pas vous endetter
-					<br> - Si vous loupez votre test une première fois, vous ne pouvez pas le repasser de suite, vous devrez le
-					retenter un
-					autre jour.
+					آزمون آیین نامه
+					<br> - هزینه آزمون آیین نامه 200 دلار بوده و در صورت رد شدن در آزمون وجه آزمون به شما باز گردانده نخواهد شد
+					<br> - در هر روز فقط می توانید 1 بار آزمون بدهید و اگر در آزمون قبول نشدید لطفا در روز دیگری مراجعه نمایید
 					<br>
-					<br> Examen de Conduite
-					<br> - L'examen de Conduite coute 500$, comme pour l'examen de code, ce paiement ne vous sera pas remboursé si
-					vous échoué.
-					<br> - La chose principale pour votre permis c'est de faire attention à ce qui vous entoure et surtout éviter les
-					accidents
+					<br> آزمون رانندگی شهری
+					<br> - آزمون رانندگی شهری 500 دلار هزینه دارد ، همانطور که برای آزمون آیین نامه ، در صورت عدم موفقیت ، این مبلغ پرداخت بازپرداخت نمی شود.
+					<br> - نکته اصلی گواهینامه شما توجه به مواردی است که در رانندگی بسیار مهم است و به خصوص برای جلوگیری از تصادفات
 					!</p>
 				</div>
-				<div class="buttonspot">
-					<a href="#" class="button btnQuestion">Démarrer</a>
+				<div class="buttonspot rtl">
+					<a href="#" class="button btnQuestion">شروع کنید</a>
 				</div>
 				<div class="barre-progression">
-					<h2>Progrès</h2>
+						<h2>درصد پیشرفت</h2>
 					<progress class="progression" value="0" max="10">
 				</div>
 			</div>
 			<!-- Question-->
-			<div class="body questionnaire-container">
-				<div class="content">
+			<div class="body questionnaire-container  rtl">
+				<div class="content  rtl">
 					<h2 id="questionNumero"></h2>
 					<p id="question"></p>
 					<form class="form" id="question-form">
@@ -69,11 +63,11 @@
 							<input type="radio" name="question" id="answerD" value="D">
 							<label class="answerD"></label>
 						</div>
-						<button type="submit" id="submit" class="submit">Prochaine question</button>
+						<button type="submit" id="submit" class="submit">سوال بعدی</button>
 					</form>
 				</div>
 				<div class="barre-progression">
-					<h2>Progrès</h2>
+					<h2>درصد پیشرفت</h2>
 					<progress class="progression" value="0" max="10">
 				</div>
 			</div>
@@ -81,36 +75,36 @@
 			<div class="body resultGood">
 				<div class="content">
 					<center>
-						<p class="bold-text">Bon travail !</p>
+						<p class="bold-text">آزمون رو خب دادی</p>
 						<br>
-						<br>Vous avez bien travaillé durant l'examen!
+						<br>شما نمره حداقل برای قبولی در آزمون را گرفتید
 						<br>
-						<br>Vous pouvez maintenant fermer cette fenètre et passer à l'examen.
+						<br>اکنون می توانید این پنجره را بسته و به آزمون شهری بروید
 					</center>
 				</div>
 				<div class="buttonspot">
-					<a href="#" class="button btnClose">Fermer</a>
+					<a href="#" class="button btnClose">بستن</a>
 				</div>
 				<div class="barre-progression">
-					<h2>Progrès</h2>
+					<h2>درصد پیشرفت</h2>
 					<progress class="progression" value="10" max="10">
 				</div>
 			</div>
 			<div class="body resultBad">
 				<div class="content">
 					<center>
-						<p class="bold-text">Vous avez échoué</p>
+						<p class="bold-text">شما نمره قبولی را در آزمون دریافت نکردید</p>
 						<br>
-						<br>Vous n'êtes pas prêt pour ce test, essayez une nouvelle fois, plus tard...
+						<br>شما اطلاعات کافی را برای قبولی در آزمون ندارید لطفا به کتاب آیین نامه مراجعه کنید برای تکمیل اطلاعات خود
 						<br>
 						<br>
 					</center>
 				</div>
 				<div class="buttonspot">
-					<a href="#" class="button btnKick">Fermer</a>
+					<a href="#" class="button btnKick">بستن</a>
 				</div>
 				<div class="barre-progression">
-					<h2>Progrès</h2>
+					<h2>درصد پیشرفت</h2>
 					<progress class="progression" value="10" max="10">
 				</div>
 			</div>

@@ -1,91 +1,91 @@
 var tableauQuestion = [
 	{
-		question: "Si vous conduisez à 80km/h, que vous approchez d'un lieu de résidence, cela veut dire que :",
-		propositionA: "Vous devez accélérer",
-		propositionB: "Vous pouvez garder votre vitesse, si vous ne croisez pas d'autres véhicules",
-		propositionC: "Vous devez ralentir",
-		propositionD: "Vous pouvez garder votre vitesse",
+		question: "اگر 80 کیلومتر در ساعت می روید و به یک منطقه مسکونی نزدیک می شوید باید:",
+		propositionA: "به سرعت خود بی افزایید",
+		propositionB: "اگر وسیله نقلیه دیگری عبور نمی کند سرعت خود را حفظ نمایید",
+		propositionC: "آهسته برانید",
+		propositionD: "سرعت خود را حفظ نمایید",
 		reponse: "C"
 	},
 
 	{
-		question: "Vous vous apprétez à tourner à droite au feu vert, mais vous voyez un piéton qui traverse :",
-		propositionA: "Vous passez avant le piéton",
-		propositionB: "Vous vérifiez qu'il n'y a pas d'autre véhicule et vous passez",
-		propositionC: "Vous attendez que le piéton est terminé",
-		propositionD: "Vous shoutez le piéton pour passer",
+		question: "اگر در چراغ راهنمایی به سمت راست می چرخید ، اما یک عابر پیاده را مشاهده می کنید که چه کاری انجام می دهید:",
+		propositionA: "عبور می کنیم",
+		propositionB: "شما چک می کنید وسیله نقلیه دیگری اطراف شما نباشد",
+		propositionC: "صبر می کنیم تا عابر پیاده عبور کند",
+		propositionD: "به عابر پیاده ضربه میزنیم و به مسیر ود ادامه می دهیم",
 		reponse: "C"
 	},
 
 	{
-		question: "Sans aucune indication : La vitesse dans une zone résidentielle est de : __ km/h",
-		propositionA: "50",
-		propositionB: "55",
-		propositionC: "65",
-		propositionD: "70",
+		question: "بدون هیچ گونه نشانه قبلی ، سرعت در یک منطقه مسکونی: __ کیلومتر در ساعت است",
+		propositionA: "30 کیلومتر بر ساعت",
+		propositionB: "50 کیلومتر بر ساعت",
+		propositionC: "40 کیلومتر بر ساعت",
+		propositionD: "60 کیلومتر بر ساعت",
+		reponse: "B"
+	},
+
+	{
+		question: "قبل از هر تغییر خط شما باید:",
+		propositionA: "آینه ها را چک می کنیم",
+		propositionB: "نقاط کور را چک میکنیم",
+		propositionC: "به سمت مسیر راهنما زده",
+		propositionD: "تمامی گزینه های بالا",
+		reponse: "D"
+	},
+
+	{
+		question: "شیوه ی صحیح گرفتن فرمان اتومبیل در حالت معمول چیست؟",
+		propositionA: "10-10",
+		propositionB: "6-10",
+		propositionC: "12",
+		propositionD: "9-9",
 		reponse: "A"
 	},
 
 	{
-		question: "Avant chaque changement de file vous devez :",
-		propositionA: "Vérifiez vos rétroviseurs",
-		propositionB: "Vérifiez vos angles morts",
-		propositionC: "Signalez vos intentions",
-		propositionD: "Tout cela",
+		question: "چه زمانی می توانید رانندگی خود را در چراغ راهنمایی ادامه دهید؟",
+		propositionA: "وقتی چراغ سبز است",
+		propositionB: "زمانی که کسی نیست",
+		propositionC: "زمانی که در موقعت نزدیک مدرسه هستیم",
+		propositionD: "زمانی که سبز است  یا شما نیروی ویژه هستید و با چراغ گردان دارید",
 		reponse: "D"
 	},
 
 	{
-		question: "What blood alcohol level is classified as driving while intoxicated?",
-		propositionA: "0.05%",
-		propositionB: "0.18%",
-		propositionC: "0.08%",
-		propositionD: "0.06%",
+		question: "خط کشی عابر پیاده وجود ندارد چه باید کرد",
+		propositionA: "اجازه عبور به عابر پیاده نیست",
+		propositionB: "قبل از ادامه مسیر خیابان را مشاهده میکنیم",
+		propositionC: "با اشاره دست اطلاع میدهیم تا عبور کنند",
+		propositionD: "ادامه می دهید زیرا چراغ سبز است",
+		reponse: "D"
+	},
+
+	{
+		question: "آنچه در هنگام عبور وسیله نقلیه دیگر مجاز است",
+		propositionA: "به سرعت خود اضافه میکنید و از آن عبور میکنید",
+		propositionB: "بدون خروج از جاده مسیر را ادامه داده و عبور میکنید",
+		propositionC: "شما برای عبور از آن در طرف مقابل جاده رانندگی می کنید",
+		propositionD: "برای عبور از آنها از حد مجاز سرعت فراتر می روید",
 		reponse: "C"
 	},
 
 	{
-		question: "A quel moment vous pouvez passer aux feux ?",
-		propositionA: "Quand il est vert",
-		propositionB: "Quand il n'y a personne sur l'intersection",
-		propositionC: "Vous êtes dans une zone d'école",
-		propositionD: "Quand il est vert et/ou rouge et que je tourne à droite",
-		reponse: "D"
+		question: "شما در بزرگراه رانندگی می کنید که حداکثر سرعت آن را 120 کیلومتر در ساعت نشان می دهد. اما بیشتر تردد کنندگان با سرعت 125 کیلومتر در ساعت رانندگی می کنند ، بنابراین شما نباید سریعتر از",
+		propositionA: "120 کیلومتر بر ساعت",
+		propositionB: "125 کیلومتر بر ساعت",
+		propositionC: "130 کیلومتر بر ساعت",
+		propositionD: "110 کیلومتر بر ساعت",
+		reponse: "A"
 	},
 
 	{
-		question: "Un piéton est au feu rouge pour les piétons",
-		propositionA: "Vous le laissez passer",
-		propositionB: "Vous observez avant de continuer",
-		propositionC: "Vous lui faite un signe de la main",
-		propositionD: "Vous continuez votre chemin car votre feu est vert",
-		reponse: "D"
-	},
-
-	{
-		question: "Qu'est ce qui est permit quand vous dépassez un autre véhicule",
-		propositionA: "Le suivre de près pour le doubler plus vite",
-		propositionB: "Le doubler en quittant la route",
-		propositionC: "Conduire sur la route opposé pour le dépasser",
-		propositionD: "Dépasser la vitesse limite",
-		reponse: "C"
-	},
-
-	{
-		question: "Vous conduisez sur une rocade qui indique une vitesse maximum de 110 km/h. La plupart du traffic roule à 120 km/h, alors vous ne devriez pas conduire plus vite que :",
-		propositionA: "80 kmh",
-		propositionB: "40 kmh",
-		propositionC: "50 kmh",
-		propositionD: "110 kmh",
-		reponse: "D"
-	},
-
-	{
-		question: "Quand vous êtes dépassé par un autre véhicule il est important de ne PAS :",
-		propositionA: "Ralentir",
-		propositionB: "Vérifiez vos rétroviseurs",
-		propositionC: "Regarder les autres conducteurs",
-		propositionD: "Augmenter votre vitesse",
+		question: "هنگامی که شما با وسیله نقلیه دیگری سبقت گرفتید مهم نیست که:",
+		propositionA: "از سرعت خود بکاهید",
+		propositionB: "آینه های خود را چک کنید",
+		propositionC: "به راننده دیگر نگاه میکنید",
+		propositionD: "سرعت خود را افزایش دهید",
 		reponse: "D"
 	},
 ]

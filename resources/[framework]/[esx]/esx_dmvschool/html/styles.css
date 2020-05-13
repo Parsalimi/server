@@ -185,3 +185,6 @@ html {
 	font-weight: bold;
 	font-size: 1.3em;
 }
+.rtl {
+	direction: rtl;
+}
