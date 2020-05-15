@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TBCore - Multicharacter</title>
+    <link rel="stylesheet" type="text/css" href="reset.css"> <!-- RESET CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- STYLE CSS -->
+</head>
+    <body>
+        <div class="container" id="noselect">
+
+                <div class="create-character">
+                        <div class="create-character-box">
+                            <div class="create-topbar"><p>Karakter Aanmaken</p></div>
+                            <div class="accept-create">
+                                <p>Karakter Aanmaken</p>
+                            </div>
+                            <div class="deny-create">
+                                <p>Terug naar karakters</p>
+                            </div>
+        
+                            <div class="playerdata">
+                                <div class="inputs">
+                                    <div class="firstname">
+                                        <input class="text" type="text" id="firstname" placeholder="Jan" required>
+                                        <label>Voornaam</label>
+                                    </div>
+                                    <div class="tussenvoegsel">
+                                        <input class="text" type="text" id="tussenvoegsel" placeholder="De" required>
+                                        <label>Tussenvoegsel</label>
+                                    </div>
+                                    <div class="lastname">
+                                        <input class="text" type="text" id="lastname" placeholder="Vries" required>
+                                        <label>Achternaam</label>
+                                    </div>
+                                    <div class="dob">
+                                        <input class="text" type="date" id="dob" required>
+                                        <label>Geboortedag</label>
+                                    </div>
+                                    <div class="nationality">
+                                        <input class="text" type="text" id="nationality" placeholder="Nederlandse" required>
+                                        <label>Nationaliteit</label>
+                                    </div>
+                                    <div class="sex">
+                                        <input class="text" type="text" id="sex" placeholder="Man / Vrouw" required>
+                                        <label>Geslacht</label>
+                                    </div>
+                                    <div class="slotname">
+                                        <input class="text" type="text" id="slotname" placeholder="Politie Agent" required>
+                                        <label>Naam van karakterslot</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            <div id="myProgress">
+                <!-- <div id="myBar"></div> -->
+                <p><span id="progbar-wait">Een moment geduld</span></p>
+                <p><span id="progbar-text">Je gegevens worden opgehaald</span></p>
+                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+
+            <div class="delete-character">
+                <p><span id="delete-character-titel">Weet je zeker dat je dit karakter wilt verwijderen?</span></p>
+                <div class="accept-delete" id="accept-delete"><p>Verwijder Karakter</p></div>
+                <div class="deny-delete" id="deny-delete"><p>Terug naar karakters</p></div>
+            </div>
+
+            <div class="multicharacter">
+
+                <div class="character" data-charid="1">
+                    <div class="create-button" id="create-cid-1" data-cid="1"><p><span>Nieuw Karakter</span></p></div>
+                    <div class="slot-name"><p><span id="slot-player-name">Leeg</span></p>
+                    </div>
+                </div>
+
+                <div class="character" data-charid="2">
+                    <div class="create-button" id="create-cid-2" data-cid="2"><p><span>Nieuw Karakter</span></p></div>
+                    <div class="slot-name"><p><span id="slot-player-name">Leeg</span></p>
+                    </div>
+                </div>
+
+                <div class="character" data-charid="3">
+                    <div class="create-button" id="create-cid-3" data-cid="3"><p><span>Nieuw Karakter</span></p></div>
+                    <div class="slot-name"><p><span id="slot-player-name">Leeg</span></p>
+                    </div>
+                </div>
+
+                <div class="character" data-charid="4">
+                    <div class="create-button" id="create-cid-4" data-cid="4"><p><span>Nieuw Karakter</span></p></div>
+                    <div class="slot-name"><p><span id="slot-player-name">Leeg</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

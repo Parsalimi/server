@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+.container {
+    font-family: 'Raleway', monospace;
+}
+.container > div{
+    display: none;
+}
+.multicharacter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+.character:nth-child(1), .character:nth-child(2){
+    animation-name: an-left-slide;
+    animation-duration: 1s;
+}
+.character:nth-child(3), .character:nth-child(4){
+    animation-name: an-right-slide;
+    animation-duration: 1s;
+}
+.reverseAnimation:nth-child(1), .reverseAnimation:nth-child(2){
+    animation-name: an-left-slide-out;
+    animation-duration: 1s;
+}
+.reverseAnimation:nth-child(3), .reverseAnimation:nth-child(4){
+    animation-name: an-right-slide-out;
+    animation-duration: 1s;
+}
+@keyframes an-left-slide {
+    from{ left: 0px; }
+    to{ left: 112px; }
+}
+@keyframes an-right-slide {
+    from{ left: calc(112px*2); }
+    to{ left: 112px; }
+}
+@keyframes an-left-slide-out {
+    from{ left: 112px; }
+    to{ left: 0px; }
+}
+@keyframes an-right-slide-out {
+    from{ left: 112px; }
+    to{ left: calc(112px*2); }
+}
+.myProgressHide p span{
+    animation-name: an-hide-progress-span;
+    animation-duration: .2s;
+    overflow: hidden;
+    display: block;
+}
+.myProgressHide{
+    animation-name: an-hide-progress;
+    animation-duration: .2s;
+    white-space: nowrap;
+    opacity: 0;
+}
+@keyframes an-hide-progress {
+    from{ width: 15%; opacity: 1; }
+    to{ width: 0; opacity: .1; }
+}
+@keyframes an-hide-progress-span {
+    from{ width: 100%; }
+    to{ width: 0; margin-left: 50%; }
+}
+
+.character {
+    position: relative;
+    top: 300px;
+    left: 112px;
+    background-color: rgba(0, 0, 0, 0.856);
+    width: 350px;
+    height: 450px;
+    float: left;
+    margin-right: 100px;
+    box-shadow: 0px 0px 31px 2px rgba(0,0,0,0.42);
+}
+
+.create-button {
+    position: absolute;
+    background-color: rgba(32, 154, 211, 0.75);
+    width: 100%;
+    height: 10%;
+    bottom: 0px;
+    left: 0px;
+    border: none;
+    transition: 0.2s;
+}
+
+.create-button > p {
+    position: relative;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    top: 16px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+}
+
+.create-button:hover {
+    background-color: rgba(32, 154, 211, 1.0);
+    transition: 0.2s;
+}
+
+.play-button {
+    position: absolute;
+    background-color: rgba(89, 179, 29, 0.75);
+    width: 50%;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    border: none;
+    transition: 0.2s;
+}
+
+.play-button:hover {
+    background-color: rgba(89, 179, 29, 1.0);
+    transition: 0.2s;
+}
+
+.play-button > p {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    top: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+}
+
+.delete-button {
+    position: absolute;
+    background-color: rgba(218, 24, 24, 0.75);
+    width: 50%;
+    height: 10%;
+    right: 0;
+    bottom: 0;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: rgba(218, 24, 24, 1.0);
+    transition: 0.2s;
+}
+
+.delete-button > p {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    top: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+}
+
+.slot-name {
+    position: absolute;
+    background-color: rgba(19, 19, 19, 0.959);
+    width: 100%;
+    height: 12%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.slot-name > p {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    top: 18px;
+}
+
+.player-info {
+    position: relative;
+    color: white;
+    font-size: 14px;
+
+    top: 70px;
+    left: 20px;
+}
+
+.player-account {
+    position: relative;
+    top: 30px;
+}
+
+.player-job {
+    position: relative;
+    top: 60px;
+}
+@keyframes an-height {
+    from{ height: 0px; }
+}
+
+.welcomescreen {
+    display: block;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(19, 19, 19, 0.8);
+    height: 350px;
+    width: 500px;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 31px 2px rgba(0,0,0,0.42);
+}
+
+.welcomescreen > p {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+#welcome-titel {
+    position: relative;
+    top: 50px;
+    font-size: 30px;
+}
+
+#welcome-next {
+    position: relative;
+    top: 150px;
+    font-size: 16px;
+}
+
+#welcome-enter {
+    font-size: 25px;
+    color: rgb(255, 255, 255)
+}
+
+#myProgress {
+    display: block;
+    margin-top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    border-radius: 4px;
+}
+
+#myProgress > p {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: -70px;
+    margin-top: 5px;
+}
+
+#progbar-wait {
+    color: white;
+    font-size: 13px;
+}
+
+#progbar-text {
+    color: white;
+    font-size: 16px;
+}
+
+#myBar {
+    width: 0%;
+    height: 15px;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    line-height: 15px;
+    color: white;
+    font-size: 8px;
+    border-radius: 4px;
+}
+
+.delete-character {
+    position: relative;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(19, 19, 19, 0.8);
+    height: 250px;
+    width: 400px;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 31px 2px rgba(0,0,0,0.42);
+}
+
+.delete-character > p {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+#delete-character-titel {
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+}
+
+.accept-delete {
+    position: absolute;
+    background-color: rgba(218, 24, 24, 0.75);
+    width: 50%;
+    height: 18%;
+    bottom: 0;
+    left: 0;
+    border: none;
+    transition: 0.2s;
+}
+
+.accept-delete:hover {
+    background-color: rgba(218, 24, 24, 1.0);
+    transition: 0.2s;
+}
+
+.accept-delete > p {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    top: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    text-transform: none;
+}
+
+.deny-delete {
+    position: absolute;
+    background-color: rgba(89, 179, 29, 0.75);
+    width: 50%;
+    height: 18%;
+    bottom: 0;
+    right: 0;
+    border: none;
+    transition: 0.2s;
+}
+
+.deny-delete:hover {
+    background-color: rgba(89, 179, 29, 1.0);
+    transition: 0.2s;
+}
+
+.deny-delete > p {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    top: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    text-transform: none;
+}
+
+#bold-text {
+    font-weight: bold;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.firstname {
+    position: relative;
+    top: 30px;
+    left: 12px;
+}
+
+.firstname label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#firstname {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 233px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+.tussenvoegsel {
+    position: relative;
+    top: 30px;
+    left: 255px;
+}
+
+.tussenvoegsel label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#tussenvoegsel {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 233px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+.lastname {
+    position: relative;
+    top: 90px;
+    left: 12px;
+}
+
+.lastname label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#lastname {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 477px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+.dob {
+    position: relative;
+    top: 150px;
+    left: 12px;
+}
+
+.dob label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#dob {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 477px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+.nationality {
+    position: relative;
+    top: 210px;
+    left: 12px;
+}
+
+.nationality label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#nationality {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 477px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+.sex {
+    position: relative;
+    top: 270px;
+    left: 12px;
+}
+
+.sex label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#sex {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 233px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+.slotname {
+    position: relative;
+    top: 270px;
+    left: 255px;
+}
+
+.slotname label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#slotname {
+    outline: none;
+    border: none;
+    position: absolute;
+    color: black;
+    width: 233px;
+    height: 28px;
+    float: left;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.925);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.50);
+}
+
+
+.create-character {
+    position: relative;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(19, 19, 19, 0.8);
+    height: 400px;
+    width: 500px;
+    box-shadow: 0px 0px 31px 2px rgba(0,0,0,0.42);
+    animation-name: an-create-character;
+    animation-duration: 1s;
+}
+.create-character-reverse{
+    animation-name: an-create-character-reverse;
+    animation-duration: .6s;
+}
+@keyframes an-create-character {
+    from{ width: 0px; height: 0px; margin-top: 500px; }
+    to{ width: 500px; height: 400px; margin-top: 300px; }
+}
+@keyframes an-create-character-reverse {
+    from{ width: 500px; height: 400px; margin-top: 300px; }
+    to{ width: 0px; height: 0px; margin-top: 500px; }
+}
+
+.accept-create   {
+    position: absolute;
+    background-color: rgba(89, 179, 29, 0.75);
+    bottom: 0px;
+    left: 0px;
+    width: 50%;
+    height: 45px;
+    transition: 0.2s;
+}
+
+.accept-create:hover {
+    background-color: rgba(89, 179, 29, 1.0);
+    transition: 0.2s;
+}
+
+.accept-create > p {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    top: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    text-transform: none;
+}
+
+.deny-create {
+    position: absolute;
+    background-color: rgba(218, 24, 24, 0.75);
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    height: 45px;
+    transition: 0.2s;
+}
+
+.deny-create:hover {
+    background-color: rgba(218, 24, 24, 1.0);
+    transition: 0.2s;
+}
+
+.deny-create > p {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    top: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    text-transform: none;
+}
+
+.lds-roller {
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    top: -40px;
+}
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+    top: 50px;
+    left: 50px;
+}
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.player-info > p {
+    margin-top: 3px;
+}
+
+.player-account > p {
+    margin-top: 3px;
+}
+
+.player-job > p {
+    margin-top: 3px;
+}

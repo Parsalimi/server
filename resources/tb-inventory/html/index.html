@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
+
+    <script type="text/javascript" src="includes/jquery-ui-1.8.2.custom.min.js"></script>
+    <title>TBCore Inventory</title>
+</head>
+    <body>
+        <div id="used-item"></div>
+        <div id="added-item"></div>
+
+        <div class="container" id="noselect">
+
+            <div id="player-bsn"></div>
+            <div id="player-weight">Gewicht: <span id="p-currentweight"></span> / <span id="p-maxweight"></span></div>
+
+            <div id="player-inventory">
+            </div>
+
+            <div id="item-information">
+            </div>
+            
+            <div class="actions">
+                <input class="amountvalue" type="number" value="0" min="0" placeholder="0">
+                <div class="button" id="use"><p>Use</p></div>
+                <div class="button" id="give"><p>Give</p></div>
+                <div class="button" id="drop"><p>Drop</p></div>
+            </div>
+
+            <div id="other-inventory">
+            </div>
+
+            <div class="inv-log"></div>
+            <div class="clear-inv-log"><p>Clear Log</p></div>
+        </div>
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

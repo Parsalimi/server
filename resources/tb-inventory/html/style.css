@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Asap', sans-serif;
+    text-transform: uppercase;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+}
+
+::-webkit-scrollbar
+{
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* INV CSS */
+
+#noselect {
+    -webkit-touch-callout: none;
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none; 
+              user-select: none; 
+}
+
+.container {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+#player-inventory {
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 600px;
+    height: 580px;
+    overflow: auto;
+}
+
+#other-inventory {
+    position: fixed;
+    top: 50%;
+    left: 75%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 600px;
+    height: 580px;
+    overflow: auto;
+}
+
+.item-desc-info {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 13%;
+    height: 15%;
+    overflow: auto;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 400;
+}
+
+.item-desc-info p {
+    color: white;
+    font-size: 12px;
+}
+
+.strong {
+    font-weight: bold;
+    text-transform: none;
+}
+
+#item-name {
+    position: absolute;
+    top: 11%;
+    left: 4%;
+    font-size: 15px;
+}
+
+#item-desc {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    text-transform: none;
+    color: rgb(255, 255, 255);
+}
+
+#item-amount {
+    position: absolute;
+    top: 75%;
+    left: 4%;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 11px;
+}
+
+#item-weight {
+    position: absolute;
+    top: 86%;
+    left: 4%;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 11px;
+}
+
+.hoverControl {
+    background-color: rgba(255, 11, 11, 0.7);
+}
+
+.item-hr {
+    position: relative;
+    top: 25%;
+    width: 90%;
+    color: white;
+}
+
+.slot {
+    height: 125px;
+    width: 110px;
+    background-color: rgba(235, 235, 235, 0.03); /* 0,02 */
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.1);
+    border-width: 1px 1px 1px 1px;
+    transition: 0.2s;
+}
+
+.used-item-slot {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 125px;
+    width: 110px;
+    background-color: rgba(124, 124, 124, 0.356);
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    border-width: 1px 1px 1px 1px;
+}
+
+#used-item-image {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/used-item.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: 0;
+}
+
+.added-item-slot {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 125px;
+    width: 110px;
+    background-color: rgba(124, 124, 124, 0.356);
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    border-width: 1px 1px 1px 1px;
+}
+
+#added-item-image {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/added-item.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: 0;
+}
+
+.item-bg {
+    height: 125px;
+    width: 110px;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+}
+
+.slot:hover {
+    background-color: rgba(235, 235, 235, 0.05);
+    border-color: rgba(255,255,255,0.3);
+    transition: 0.2s;
+}
+
+.slot-hover {
+    background-color: rgba(235, 235, 235, 0.35);
+    border-color: rgba(255,255,255,0.7);
+    transition: 0.2s;
+}
+
+.label {
+    background-color: rgba(14, 14, 14, 0.5);
+    font-size: 8.5px;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    left: 0;
+    z-index: 500;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400&display=swap');
+
+#iLabel {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 400;
+}
+
+.actions {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    margin-top: 15px;
+    height: 50px;
+    background-color: rgba(235, 235, 235, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: rgba(235, 235, 235, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
+
+.button-hover {    
+    background-color: rgba(235, 235, 235, 0.35);
+    border-color: rgba(255,255,255,0.7);
+    transition: 0.2s;
+}
+
+.disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.0);
+    transition: 0.2s;
+}
+
+.button > p {
+    position: relative;
+    top: 31%;
+    color: white;
+    text-align: center;
+}
+
+.amountvalue {
+    margin-top: 15px;
+    border: none;
+    color: #fff;
+    width: 160px;
+    text-align:center;
+    background-color: rgba(235, 235, 235, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    transition: 0.2s;
+    outline: none;
+    height: 50px;
+    transition: 0.2s;
+}
+
+.amountvalue:hover {
+    background-color: rgba(235, 235, 235, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
+
+.p-weight {
+    position: fixed;
+    top: 18%;
+    left: 37.2%;
+}
+
+.o-weight {
+    position: fixed;
+    top: 18%;
+    left: 87.2%;
+}
+
+.label p {
+    position: relative;
+    top: 35%;
+    left: 50;
+}
+
+.info {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 500;
+}
+
+.info p {
+    font-size: 11px;
+    color: white;
+}
+
+#player-bsn {
+    position: absolute;
+    top: 19.5vh;
+    left: 9.6%;
+    color: #fff;
+    text-transform: none;
+    font-size: 12px;
+}
+
+#player-weight {
+    position: absolute;
+    top: 21.5vh;
+    left: 9.65%;
+    color: #fff;
+    text-transform: none;
+    font-size: 12px;
+}
+
+#slot-0 {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/key_1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 0;
+}
+
+#slot-1 {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/key_2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 0;
+}
+
+#slot-2 {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/key_3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 0;
+}
+
+#slot-3 {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/key_4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 0;
+}
+
+.ammoIcon {
+    width: 10px;
+    height: 10px;
+}
+
+.inv-log {
+    position: absolute;
+    color: white;
+    font-size: 11px;
+    bottom: 13px;
+    right: 15px;
+    max-height: 100px;
+    text-align: right;
+    max-width: 600px;
+    height: 100px;
+    width: 390px;
+    overflow-y: scroll;
+    background-color: rgba(21, 29, 65, 0.1);
+}
+
+.clear-inv-log {
+    position: absolute;
+    bottom: 13px;
+    right: 420px;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(21, 29, 65, 0.35);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 11px;
+    transition: 0.2s;
+}
+
+.clear-inv-log:hover {
+    background-color: rgba(21, 29, 65, 0.5);
+    transition: 0.2s;
+}
+
+.clear-inv-log > p {
+    margin-top: 10px;
+}
