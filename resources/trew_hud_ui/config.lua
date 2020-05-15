@@ -11,7 +11,7 @@ Config.font = {
 
 Config.date = {
 	format	 	= 'default',
-	AmPm		= false
+	AmPm		= true
 }
 
 Config.voice = {
@@ -49,18 +49,18 @@ Config.ui = {
 
 	showWalletMoney 	= true,
 	showBankMoney 		= true,
-	showBlackMoney 		= false,
+	showBlackMoney 		= true,
 	showSocietyMoney	= true,
 
 	showDate 			= true,
 	showLocation 		= true,
 	showVoice	 		= true,
 
-	showHealth			= false,
-	showArmor	 		= false,
-	showStamina	 		= false,
-	showHunger 			= false,
-	showThirst	 		= false,
+	showHealth			= true,
+	showArmor	 		= true,
+	showStamina	 		= true,
+	showHunger 			= true,
+	showThirst	 		= true,
 
 	showMinimap			= true,
 
