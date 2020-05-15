@@ -35,10 +35,10 @@ Citizen.CreateThread(function()
     while true do
         Wait(0)
         -- Press Key
-        if IsControlJustPressed(1, Config.Key["L"]) and not IsPedInAnyVehicle(PlayerPedId()) and not IsOpenMenu then
+        if IsControlJustPressed(1, Config.Key["LEFTALT"]) and not IsPedInAnyVehicle(PlayerPedId()) and not IsOpenMenu then
             local PlayerPed = GetPlayerPed(-1)
             local PlayerCoords = GetEntityCoords(PlayerPed)
-            local Vehicles = GetClosestVehicle(PlayerCoords.x, PlayerCoords.y, PlayerCoords.z, 2.0, 0, 71)
+            local Vehicles = GetClosestVehicle(PlayerCoords.x, PlayerCoords.y, PlayerCoords.z, 10.0, 0, 71)
             if GetPedInVehicleSeat(Vehicles, -1) == 0 then
                 local Vehicle_Plate = GetVehicleNumberPlateText(Vehicles)
                 local Vehicle_Lock = GetVehicleDoorLockStatus(Vehicles)
