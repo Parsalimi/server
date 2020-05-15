@@ -23,8 +23,7 @@ end
   Ouverture du téphone lié a un item
   Un solution ESC basé sur la solution donnée par HalCroves
   https://forum.fivem.net/t/tutorial-for-gcphone-with-call-and-job-message-other/177904
---]]
---[[
+ 
 local ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) 
     ESX = obj 
@@ -38,8 +37,7 @@ TriggerEvent('esx:getSharedObject', function(obj)
             cb(items.count)
         end
     end)
-end)
---]]
+end) --]] 
 
 
 
