@@ -471,6 +471,7 @@ Citizen.CreateThread(function()
 end)
 
 
+
 -- Disable wanted level
 if Config.DisableWantedLevel then
 	Citizen.CreateThread(function()
